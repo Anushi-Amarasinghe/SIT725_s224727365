@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adding two numbers </title>
+</head>
+<body>
+
+    <h1>Let's add two numbers</h1>
+    <p>Input two numbers and get the sum of these numbers.</p>
+
+    <label>Number 01:</label>
+    <input type="number" id="numA"><br><br>
+
+    <label>Number 02:</label>
+    <input type="number" id="numB"><br><br>
+
+    <button onclick="calculateSum()">Get Sum</button>
+
+    <p id="result" style="margin-top:20px; font-weight:bold;"></p>
+
+<script>
+function calculateSum() {
+    const a = document.getElementById('numA').value;
+    const b = document.getElementById('numB').value;
+
+    // Call /add endpoint with query params
+    fetch(`/add?a=${a}&b=${b}`)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('result').innerText = data;
+        })
+        .catch(err => {
+            document.getElementById('result').innerText = "Error calling API.";
+        });
+}
+</script>
+
+</body>
+</html>
