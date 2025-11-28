@@ -1,0 +1,47 @@
+.navbar-size {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.user-image-size {
+  height: 56px;
+  margin: 4px 0;
+}
+
+.main-body {
+  background-color: #2e3a59;
+  color: white;
+  min-height: 100vh;
+}
+
+.materialboxed-image {
+  margin: 10px auto;
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card.medium {
+  height: 500px !important;
+}
+
+.card-title {
+  font-size: 1rem !important;
+  font-weight: bold !important;
+}
+
+.card-content {
+  padding: 2px !important;
+}
+
+.card-text {
+  color: black;
+}
+
+.card-image {
+  max-height: 85% !important;
+}
+.card-image img {
+  width: 100%;
+  object-fit: contain;
+}
