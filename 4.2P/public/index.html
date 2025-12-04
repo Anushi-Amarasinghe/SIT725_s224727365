@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Movie App</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-wrapper navbar-size">
+        <a href="#" class="brand-logo">
+          <img class="user-image-size" src="images/user-image.jpeg" />
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a target="_blank" href="#">MovieWorld</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Body -->
+    <main class="main-body">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 center-align">
+            <h1>🎬 Movie Collection</h1>
+            <p class="flow-text">Explore movies with dynamic Materialize cards</p>
+          </div>
+
+          <div class="col s12 center-align">
+            <img class="materialboxed materialboxed-image" src="images/background.jpeg" />
+          </div>
+
+          <div class="col s12 center-align">
+            <a class="waves-effect waves-light btn modal-trigger" data-target="modal1"> <i class="material-icons left">add</i>Add Movie </a>
+          </div>
+        </div>
+
+        <!-- Dynamic Cards -->
+        <div class="row" id="card-section"></div>
+      </div>
+
+      <!-- Modal -->
+      <div id="modal1" class="modal modal-fixed-footer">
+        <div class="row modal-content">
+          <form class="col s12" id="movieForm">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="movie_title" type="text" class="validate" required />
+                <label for="movie_title">Movie Title</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="movie_genre" type="text" class="validate" required />
+                <label for="movie_genre">Genre</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="movie_director" type="text" class="validate" required />
+                <label for="movie_director">Director</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="movie_releaseYear" type="number" class="validate" min="1900" max="2030" required />
+                <label for="movie_releaseYear">Release Year</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="movie_rating" type="number" class="validate" min="0" max="10" step="0.1" required />
+                <label for="movie_rating">Rating (0-10)</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="poster_url" type="text" class="validate" required />
+                <label for="poster_url">Poster URL</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="movie_synopsis" class="materialize-textarea validate" required></textarea>
+                <label for="movie_synopsis">Synopsis</label>
+              </div>
+            </div>
+
+            <div class="row center-align">
+              <a class="waves-effect waves-light btn modal-close" id="formSubmit">Add Movie</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
