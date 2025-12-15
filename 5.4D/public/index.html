@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Books Catalog</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+      }
+      h1 {
+        color: #333;
+      }
+      h2 {
+        color: #555;
+        margin-top: 30px;
+      }
+      button {
+        background-color: #2196F3;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 20px 0;
+      }
+      button:hover {
+        background-color: #1976D2;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        padding: 15px;
+        margin: 10px 0;
+        background-color: #f5f5f5;
+        border-left: 4px solid #4CAF50;
+        cursor: pointer;
+      }
+      li:hover {
+        background-color: #e0e0e0;
+      }
+      li.selected {
+        background-color: #d0d0d0;
+      }
+      .book-item {
+        font-size: 1em;
+        color: #333;
+      }
+      #book-details {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #f5f5f5;
+        border-left: 4px solid #4CAF50;
+        display: none;
+      }
+      #book-details.show {
+        display: block;
+      }
+      .detail-row {
+        margin: 10px 0;
+      }
+      .detail-label {
+        font-weight: bold;
+        color: #333;
+      }
+      .detail-value {
+        color: #666;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Books Catalogue developed by s224727365</h1>
+    <h2>Get all books</h2>
+    <p>Click the button below to get all books from the server:</p>
+    <button id="getBooksBtn">Get all books</button>
+    <ul id="books-list"></ul>
+    
+    <div id="book-details">
+      <div class="detail-row">
+        <span class="detail-label">Title:</span>
+        <span class="detail-value" id="detail-title"></span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Author:</span>
+        <span class="detail-value" id="detail-author"></span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Year:</span>
+        <span class="detail-value" id="detail-year"></span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Genre:</span>
+        <span class="detail-value" id="detail-genre"></span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Summary:</span>
+        <span class="detail-value" id="detail-summary"></span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Price (AUD):</span>
+        <span class="detail-value" id="detail-price"></span>
+      </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
