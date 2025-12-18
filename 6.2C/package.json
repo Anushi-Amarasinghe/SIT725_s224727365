@@ -1,0 +1,21 @@
+{
+  "name": "5.2p",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --reporter spec",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Week 5 Practice - MVC Structure with Books Catalog",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "chai": "^6.2.1",
+    "mocha": "^11.7.5",
+    "request": "^2.88.2"
+  }
+}
